@@ -11,7 +11,7 @@ class FormViewModel: ObservableObject {
     @Published var name = ""
     @Published var uiImage: UIImage
     
-    private var id: String?
+    var id: String?
     
     var updating: Bool {
         id != nil
@@ -28,6 +28,6 @@ class FormViewModel: ObservableObject {
     init(_ myImage: MyImage) {
         name = myImage.nameView
         id = myImage.imageID
-        uiImage = UIImage(systemName: "photo")!
+        uiImage = myImage.uiImage
     }
 }
