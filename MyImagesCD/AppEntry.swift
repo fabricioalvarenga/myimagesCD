@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct MyImagesCDApp: App {
+struct AppEntry: App {
     var body: some Scene {
         WindowGroup {
             MyImagesGridView()
