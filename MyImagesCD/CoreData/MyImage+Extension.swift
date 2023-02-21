@@ -25,4 +25,12 @@ extension MyImage {
         
         return UIImage(systemName: "photo")!
     }
+    
+    var commentView: String {
+        comment ?? ""
+    }
+    
+    var receivedFromView: String {
+        receivedFrom ?? ""
+    }
 }
