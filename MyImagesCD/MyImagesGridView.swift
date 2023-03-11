@@ -80,7 +80,14 @@ struct MyImagesGridView: View {
     
     func restoreMyImage() {
         if let codableImage = shareService.codableImage {
+            let imgURL = URL.documentsDirectory.appending(path: "\(codableImage.id).jpg")
             let newImage = MyImage(context: moc)
+            
+            if let data = try? Data(contentsOf: imgURL),
+               let uiImage = UIImage(data: data) {
+                newImage.image = uiImage
+            }
+            
             newImage.id = codableImage.id
             newImage.name = codableImage.name
             newImage.comment = codableImage.comment
@@ -88,12 +95,20 @@ struct MyImagesGridView: View {
             newImage.receivedFrom = codableImage.receivedFrom
             
             try? moc.save()
+            try? FileManager().removeItem(at: imgURL)
         }
         shareService.codableImage = nil
     }
     
     func updateImageInfo(myImage: MyImage) {
         if let codableImage = shareService.codableImage {
+            let imgURL = URL.documentsDirectory.appending(path: "\(codableImage.id).jpg")
+            
+            if let data = try? Data(contentsOf: imgURL),
+               let uiImage = UIImage(data: data) {
+                myImage.image = uiImage
+            }
+            
             myImage.id = codableImage.id
             myImage.name = codableImage.name
             myImage.comment = codableImage.comment
@@ -101,6 +116,7 @@ struct MyImagesGridView: View {
             myImage.receivedFrom = codableImage.receivedFrom
             
             try? moc.save()
+            try? FileManager().removeItem(at: imgURL)
         }
         shareService.codableImage = nil
     }

@@ -12,6 +12,11 @@
 		207CCEDF29A394C50065A451 /* FormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CCEDE29A394C50065A451 /* FormType.swift */; };
 		207CCEE129A395E90065A451 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CCEE029A395E90065A451 /* FileManager+Extension.swift */; };
 		209D255729A8192000C93071 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 209D255629A8192000C93071 /* ZIPFoundation */; };
+		20D270C129BC8F3900251FCD /* EmailForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D270C029BC8F3900251FCD /* EmailForm.swift */; };
+		20D270C329BC917E00251FCD /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D270C229BC917E00251FCD /* MailView.swift */; };
+		20D270C629BCA25700251FCD /* MyImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D270C429BCA25700251FCD /* MyImage+CoreDataClass.swift */; };
+		20D270C729BCA25700251FCD /* MyImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D270C529BCA25700251FCD /* MyImage+CoreDataProperties.swift */; };
+		20D270C929BCA7EA00251FCD /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D270C829BCA7EA00251FCD /* UIImageTransformer.swift */; };
 		20E28028299EEC7700C05000 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E28027299EEC7700C05000 /* AppEntry.swift */; };
 		20E2802A299EEC7700C05000 /* MyImagesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E28029299EEC7700C05000 /* MyImagesGridView.swift */; };
 		20E2802C299EEC7800C05000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E2802B299EEC7800C05000 /* Assets.xcassets */; };
@@ -30,6 +35,11 @@
 		2021D54629A4ECE60064584B /* icon-doc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-doc.png"; sourceTree = SOURCE_ROOT; };
 		207CCEDE29A394C50065A451 /* FormType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormType.swift; sourceTree = "<group>"; };
 		207CCEE029A395E90065A451 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		20D270C029BC8F3900251FCD /* EmailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailForm.swift; sourceTree = "<group>"; };
+		20D270C229BC917E00251FCD /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		20D270C429BCA25700251FCD /* MyImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyImage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20D270C529BCA25700251FCD /* MyImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20D270C829BCA7EA00251FCD /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
 		20E28024299EEC7700C05000 /* MyImagesCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyImagesCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E28027299EEC7700C05000 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 		20E28029299EEC7700C05000 /* MyImagesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImagesGridView.swift; sourceTree = "<group>"; };
@@ -55,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20D270BF29BC8F2600251FCD /* Mail */ = {
+			isa = PBXGroup;
+			children = (
+				20D270C229BC917E00251FCD /* MailView.swift */,
+				20D270C029BC8F3900251FCD /* EmailForm.swift */,
+			);
+			path = Mail;
+			sourceTree = "<group>";
+		};
 		20E2801B299EEC7700C05000 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +99,7 @@
 				20E2803D299EEF8900C05000 /* ImagePicker.swift */,
 				207CCEE029A395E90065A451 /* FileManager+Extension.swift */,
 				20020D0929A4E65800D67809 /* ShareService.swift */,
+				20D270BF29BC8F2600251FCD /* Mail */,
 				20E2803F299EF13E00C05000 /* Form */,
 				20E28035299EECAC00C05000 /* CoreData */,
 				20E2802B299EEC7800C05000 /* Assets.xcassets */,
@@ -100,8 +120,11 @@
 		20E28035299EECAC00C05000 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				20D270C429BCA25700251FCD /* MyImage+CoreDataClass.swift */,
+				20D270C529BCA25700251FCD /* MyImage+CoreDataProperties.swift */,
 				20E28036299EECC600C05000 /* MyImagesDataModel.xcdatamodeld */,
 				20E28039299EED0D00C05000 /* MyImagesContainer.swift */,
+				20D270C829BCA7EA00251FCD /* UIImageTransformer.swift */,
 				20E2803B299EEDAA00C05000 /* MyImage+Extension.swift */,
 			);
 			path = CoreData;
@@ -195,15 +218,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				20E28043299EF26B00C05000 /* ImageFormView.swift in Sources */,
+				20D270C729BCA25700251FCD /* MyImage+CoreDataProperties.swift in Sources */,
+				20D270C629BCA25700251FCD /* MyImage+CoreDataClass.swift in Sources */,
 				207CCEE129A395E90065A451 /* FileManager+Extension.swift in Sources */,
 				20020D0A29A4E65800D67809 /* ShareService.swift in Sources */,
 				20E2802A299EEC7700C05000 /* MyImagesGridView.swift in Sources */,
 				20E2803A299EED0D00C05000 /* MyImagesContainer.swift in Sources */,
+				20D270C929BCA7EA00251FCD /* UIImageTransformer.swift in Sources */,
 				20E2803C299EEDAA00C05000 /* MyImage+Extension.swift in Sources */,
+				20D270C129BC8F3900251FCD /* EmailForm.swift in Sources */,
 				207CCEDF29A394C50065A451 /* FormType.swift in Sources */,
 				20E2803E299EEF8900C05000 /* ImagePicker.swift in Sources */,
 				20E28041299EF14D00C05000 /* FormViewModel.swift in Sources */,
 				20E28038299EECC600C05000 /* MyImagesDataModel.xcdatamodeld in Sources */,
+				20D270C329BC917E00251FCD /* MailView.swift in Sources */,
 				20E28028299EEC7700C05000 /* AppEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
